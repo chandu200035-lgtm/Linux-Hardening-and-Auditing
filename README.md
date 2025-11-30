@@ -1,72 +1,72 @@
-\# Linux-Security-Hardening-Project
+# Linux-Security-Hardening-Project
 
 
 
 
 
-\## Enterprise-Grade Linux Server Hardening Lab
+## Enterprise-Grade Linux Server Hardening Lab
 
 
 
-\## This project is my first Linux security hardening lab. I learned how to secure an Ubuntu server step by step using real-world security engineering methods. This includes SSH hardening, firewall configuration, Fail2Ban, audit logs, and automatic security updates.
-
-
-
-
-
-\## Project Overview
-
-
-
-\- I updated and patched my Ubuntu system
-
-\- I created a separate admin user for security
-
-\- I hardened SSH configuration
-
-\- I set up and enabled the UFW firewall
-
-\- I installed and configured Fail2Ban to stop brute-force attacks
-
-\- I set up auditd to log user actions and login events
-
-\- I enabled automatic security updates
+## This project is my first Linux security hardening lab. I learned how to secure an Ubuntu server step by step using real-world security engineering methods. This includes SSH hardening, firewall configuration, Fail2Ban, audit logs, and automatic security updates.
 
 
 
 
 
-\## Skills Demonstrated
+## Project Overview
 
 
 
-\- Basic Linux administration
+- I updated and patched my Ubuntu system
 
-\- User and permission management
+- I created a separate admin user for security
 
-\- SSH security configuration
+- I hardened SSH configuration
 
-\- Network security using UFW firewall
+- I set up and enabled the UFW firewall
 
-\- Configuring Fail2Ban to block attacks
+- I installed and configured Fail2Ban to stop brute-force attacks
 
-\- Setting up audit logs with auditd
+- I set up auditd to log user actions and login events
 
-\- Automatic patching and updates
-
-
+- I enabled automatic security updates
 
 
 
-\## Architecture
+
+
+## Skills Demonstrated
 
 
 
-\- The host machine is my Windows laptop using VirtualBox.
+- Basic Linux administration
 
-\- Inside VirtualBox, I created an Ubuntu Linux virtual machine.
+- User and permission management
 
-\- I installed and configured multiple security tools inside the VM.
+- SSH security configuration
+
+- Network security using UFW firewall
+
+- Configuring Fail2Ban to block attacks
+
+- Setting up audit logs with auditd
+
+- Automatic patching and updates
+
+
+
+
+
+## Architecture
+
+
+
+- The host machine is my Windows laptop using VirtualBox.
+
+- Inside VirtualBox, I created an Ubuntu Linux virtual machine.
+
+- I installed and configured multiple security tools inside the VM.
 
 
 
@@ -134,20 +134,20 @@
 
 
 
-\## Hardening Steps Performed
+## Hardening Steps Performed
 
 
 
 
 
-\### 1. System update and upgrade
+### 1. System update and upgrade
 
 
 I updated the Linux system to make sure it had the latest patches. This included updating packages and upgrading the system to fix security vulnerabilities.
 
 
 
-\### 2. Creating a Secure Admin User
+### 2. Creating a Secure Admin User
 
 
 
@@ -155,15 +155,15 @@ I created a new user called 'secengineer' and added it to the sudo group. This h
 
 
 
-\### 3. SSH Hardening
+### 3. SSH Hardening
 
 
 
-I edited the /etc/ssh/sshd\_config file to disable root login and limit SSH access only to my two users. This reduces the attack surface for brute-force attacks.
+I edited the /etc/ssh/sshd\config file to disable root login and limit SSH access only to my two users. This reduces the attack surface for brute-force attacks.
 
 
 
-\### 4. Firewall Configuration (UFW)
+### 4. Firewall Configuration (UFW)
 
 
 
@@ -171,7 +171,7 @@ I enabled the Ubuntu firewall and allowed only SSH through it. All other incomin
 
 
 
-\### 5. Installing Fail2Ban
+### 5. Installing Fail2Ban
 
 
 
@@ -179,7 +179,7 @@ I installed Fail2Ban and configured it to monitor SSH login attempts. It bans IP
 
 
 
-\### 6. auditd System Logging
+### 6. auditd System Logging
 
 
 
@@ -187,7 +187,7 @@ I installed auditd to track important security events like logins and admin comm
 
 
 
-\### 7. Automatic Security Updates
+### 7. Automatic Security Updates
 
 
 
@@ -197,11 +197,11 @@ I enabled unattended-upgrades so the server installs critical security patches a
 
 
 
-\## Validation and Testing
+## Validation and Testing
 
 
 
-\### 1. SSH Hardening Validation
+### 1. SSH Hardening Validation
 
 
 
@@ -214,7 +214,7 @@ sudo sshd -T | grep -E "permitrootlogin|maxauthtries|allowusers"
 
 
 
-\### 2. Firewall (UFW) Validation
+### 2. Firewall (UFW) Validation
 
 
 
@@ -228,7 +228,7 @@ sudo ufw status verbose
 
 
 
-\### 3. Fail2Ban Validation
+### 3. Fail2Ban Validation
 
 
 
@@ -242,7 +242,7 @@ sudo fail2ban-client status sshd
 
 
 
-\### 4. auditd Validation
+### 4. auditd Validation
 
 
 
@@ -252,15 +252,15 @@ I tested auditd by checking login and sudo activity logs.
 
 ```
 
-sudo ausearch -m USER\_LOGIN --start today
+sudo ausearch -m USER_LOGIN --start today
 
-sudo ausearch -m USER\_CMD --start today
+sudo ausearch -m USER_CMD --start today
 
 ```
 
 
 
-\### 5. Automated Security Updates Validation
+### 5. Automated Security Updates Validation
 
 
 
@@ -273,4 +273,5 @@ sudo systemctl status unattended-upgrades
 sudo unattended-upgrade --dry-run --debug
 
 ```
+
 

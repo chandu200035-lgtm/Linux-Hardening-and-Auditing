@@ -273,16 +273,22 @@ sudo systemctl status unattended-upgrades
 sudo unattended-upgrade --dry-run --debug
 
 ```
-### 1. SSH Hardening Validation
+## 1. SSH Hardening Validation
 ![SSH Hardening Status](ssh_hardening_status.png)
-### 2. Firewall (UFW) Validation
-![Firewall UFW Status](Firewall (UFW)_status.png)
-### 3. Fail2Ban Validation
+
+## 2. Firewall (UFW) Validation
+![Firewall UFW Status](Firewall%20(UFW)_status.png)
+
+## 3. Fail2Ban Validation
 ![Fail2Ban Status](fail2ban_status.png)
-### 4. auditd Validation
+
+## 4. auditd Validation
 ![auditd Status](auditd_status.png)
-### 5. Automated Security Updates Validation
-![Unattended Upgrades Status](Automated Security Updates_status.png)
+
+## 5. Unattended Security Updates Validation
+![Unattended Updates Status](Automated%20Security%20Updates_status.png)
+
+
 
 
 

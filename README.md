@@ -1,4 +1,4 @@
-\# Linux-Security-Hardening-Project
+# Linux-Security-Hardening-Project
 
 
 
@@ -271,4 +271,5 @@ sudo systemctl status unattended-upgrades
 sudo unattended-upgrade --dry-run --debug
 
 ```
+
 
